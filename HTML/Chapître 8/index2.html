@@ -6,7 +6,7 @@
 <body>
   <h2>Formulaire</h2>
   <p>Vos coordonnées</p>
-  <form method="POST" action="traitement.php">
+  <form method="GET" action="http://bienvu.net/script.php">
     <div>
       <label for="nom">Votre nom* :</label>
       <input type="text" id="nom" name="nom" required>
@@ -18,6 +18,7 @@
     <div>
       <label for="sexe">Sexe* :</label>
       <select id="sexe" name="sexe" required>
+        <option value="">Veuillez sélectionner votre sexe</option>
         <option value="homme">Homme</option>
         <option value="femme">Femme</option>
         <option value="autre">Autre</option>
@@ -46,19 +47,32 @@
     <br>
       <p>Votre demande</p>
       <div>
-      <label for="sujet">Sujet* :</label>
-      <select id="sujet" name="sujet" required>
-        <option value="mes commandes">Mes commandes</option>
-        <option value="question sur un produit">Question sur un produit</option>
-        <option value="reclamation">Réclamation</option>
-        <option value="autres">Autres</option>
-      </div>
-      <div>
-      <label for="votre question">Votre question* :</label>
-      <input type="text" id="votre question" name="votre question" required>
-      </div>
-
-    <input type="submit" value="Envoyer">
+ 
+        <form method="GET" action="http://bienvu.net/script.php">
+          <div>
+            <label for="sujet">Sujet* :</label>
+            <select id="sujet" name="sujet" required>
+              <option value="">Veuillez sélectionner un sujet</option>
+              <option value="commandes">Mes commandes</option>
+              <option value="question_produit">Question sur un produit</option>
+              <option value="reclamation">Réclamation</option>
+              <option value="autres">Autres</option>
+            </select>
+          </div>
+          <div>
+            <label for="question">Votre question :</label>
+            <textarea id="question" name="question"></textarea>
+          </div>
+          <form method="GET" action="http://bienvu.net/script.php">
+            <div>
+              <label for="traitement_informatique">J'accepte le traitement informatique de ce formulaire *:</label>
+              <input type="checkbox" id="traitement_informatique" name="traitement_informatique" required>
+            </div>
+            <div>
+              <input type="submit" value="Envoyer">
+              <input type="button" value="Annuler">
+            </div>
+          </form>
   </form>
 </body>
 </html>
