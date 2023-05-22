@@ -6,7 +6,7 @@
 <body>
   <h2>Formulaire</h2>
   <p>Vos coordonnées</p>
-  <form method="GET" action="http://bienvu.net/script.php">
+  <form method="POST" action="http://bienvu.net/script.php">
     <div>
       <label for="nom">Votre nom* :</label>
       <input type="text" id="nom" name="nom" required>
@@ -47,8 +47,9 @@
     <br>
       <p>Votre demande</p>
       <div>
- 
-        <form method="GET" action="http://bienvu.net/script.php">
+       <!-- La différence entre GET et POST est que l'URL change pour GET il prend les données que nous inscrivons dans le formulaire
+      et pour POST il ne prend en compte que le site où l'on va. -->
+        <form method="POST" action="http://bienvu.net/script.php"></form>
           <div>
             <label for="sujet">Sujet* :</label>
             <select id="sujet" name="sujet" required>
@@ -63,7 +64,7 @@
             <label for="question">Votre question :</label>
             <textarea id="question" name="question"></textarea>
           </div>
-          <form method="GET" action="http://bienvu.net/script.php">
+          <form method="POST" action="http://bienvu.net/script.php">
             <div>
               <label for="traitement_informatique">J'accepte le traitement informatique de ce formulaire *:</label>
               <input type="checkbox" id="traitement_informatique" name="traitement_informatique" required>
