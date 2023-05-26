@@ -1,0 +1,113 @@
+/* Styles CSS pour la navbar */
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li.navbar-item {
+  float: left;
+}
+
+li.navbar-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: underline;
+}
+
+
+
+.container {
+  position: relative;
+  height: 40vh;
+}
+
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.disc-list {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li.disc-list-item {
+  float: left;
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: underline;
+  
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+.logo {
+  height: 70px;
+  width: 250px;
+}
+.custom-font {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+
+
+@media (max-width: 768px) {
+  .col-gris {
+    display: none;
+  }
+}
+.col-gris {
+  width: 30%;
+  background-color: grey;
+}
+.flex {
+  display : flex;
+}
+@media (max-width: 768px) {
+  .disc-list {
+  display: flex;
+  flex-direction: column;
+  }
+}
